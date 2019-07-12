@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import steamEnigma from './assets/images/steam-enigma.jpg';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <header>
+      <img src={steamEnigma} alt="steam enigma" />
+    </header>
   );
 }
 
