@@ -1,0 +1,61 @@
+body {
+  background-color: #000;
+  font-family: Gill Sans;
+  margin: 0;
+}
+
+header {
+  align-items: center;
+  background: url('../assets/images/steamgrafik-cover.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: 10px;
+    margin: 60px 0 0;
+  }
+
+  img {
+    margin-top: 282px;
+  }
+}
+
+.navigation {
+  background-color: fade-out($black, .5);
+  padding: 20px 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  a {
+    border-right: 1px solid $dark-grey;
+    color: $white;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    text-decoration: none;
+
+    &:last-child {
+      border: 0;
+    }
+
+    &:hover {
+      color: $grey;
+      cursor: pointer;
+    }
+  }
+}
