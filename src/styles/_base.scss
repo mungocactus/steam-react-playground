@@ -28,7 +28,7 @@ header {
   }
 
   img {
-    margin-top: 282px;
+    margin-top: 312px;
   }
 }
 
@@ -57,5 +57,13 @@ header {
       color: $grey;
       cursor: pointer;
     }
+  }
+}
+
+.content {
+  color: aqua;
+
+  h1 {
+    font-size: 100px;
   }
 }

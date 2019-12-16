@@ -9,7 +9,7 @@ class Homepage extends React.Component {
       <React.Fragment>
         <Navigation />
         <header>
-          <img src={logo} />
+          <img src={logo} alt='logo'/>
           <Clock />
         </header>
       </React.Fragment>
