@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import RandomUser from './RandomUser';
+import RandomUser from '../pages/RandomUser';
+import App from './App';
 
 class Router extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class Router extends React.Component {
       <div>
         <BrowserRouter>
           <Switch>
+            <Route exact path='/' component={App} />
             <Route path='/randomuser' component={RandomUser} />
           </Switch>
         </BrowserRouter>

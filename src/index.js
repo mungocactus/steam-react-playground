@@ -1,11 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import App from './components/App';
+import Router from './components/Router';
 import * as serviceWorker from './serviceWorker';
 
-import './styles/core-styles.scss';
+import './styles/styles.scss';
 
-render (<App />, document.querySelector('#content'));
+render (<Router />, document.querySelector('#content'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
