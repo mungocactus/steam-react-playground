@@ -6,13 +6,13 @@ import logo from '../assets/images/steam-logo.png'
 class Homepage extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div className='homepage-content'>
         <Navigation />
         <header>
           <img src={logo} alt='logo'/>
           <Clock />
         </header>
-      </React.Fragment>
+      </div>
     )
   }
 }
