@@ -41,6 +41,7 @@
 
   .navigation {
     background-color: fade-out($black, .8);
+    padding: 10px 0;
 
     a {
       border-right: 1px solid $pale-grey;
@@ -57,22 +58,18 @@
   }
 
   h1 {
-    font-size: 50px;
-    margin-top: 85px;
+    font-size: 40px;
+    margin: 64px 0 25px;
 
-    @media (min-width: 901px) and (max-width: 1200px) {
-      font-size: 68px;
-    }
-
-    @media (min-width: 1201px) {
-      font-size: 100px;
+    @media (min-width: 726px) {
+      font-size: 50px;
     }
   }
 
   button {
     color: $white;
     letter-spacing: 2px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
     text-transform: uppercase;
 
@@ -82,7 +79,22 @@
   }
 }
 
-.email-container {
-  height: 450px;
-  margin-top: 50px;
+.user-content {
+  margin: 0 50px;
+  max-width: 500px;
+
+  h3 {
+    margin: 17px 0 10px;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: center;
+
+    p {
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-right: 5px;
+    }
+  }
 }
