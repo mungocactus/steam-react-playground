@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Images from '../components/Images'
 import randomUser from '../assets/images/random-users/random-user-8.jpg';
 
 class RandomUser extends React.Component {
@@ -7,15 +8,25 @@ class RandomUser extends React.Component {
     super();
 
     this.state = {
-      results: []
+      results: [],
+      images: Images
     };
 
     console.log(this.state);
 
-    this.getEmail = this.getEmail.bind(this);
+    this.getRandomUser = this.getRandomUser.bind(this);
+    this.getRandomImage = this.getRandomImage.bind(this);
   }
 
-  getEmail(event) {
+  getRandomImage() {
+    // const randomUser = randomUser8;
+    console.log(Images, 'chinaman');
+
+    console.log(this.state.images);
+
+  }
+
+  getRandomUser(event) {
     event.preventDefault();
     fetch('https://randomuser.me/api/?results=1')
     .then(response => response.json())
@@ -27,8 +38,9 @@ class RandomUser extends React.Component {
       }
     )
 
-    console.log('state of this', this.state.person);
+    this.getRandomImage();
 
+    console.log('state of this', this.state.results);
   }
 
   render() {
@@ -59,7 +71,7 @@ class RandomUser extends React.Component {
               </div>
             ))}
         </div>
-        <button onClick={this.getEmail}>Get User</button>
+        <button onClick={this.getRandomUser}>Get User</button>
       </div>
     )
   }
