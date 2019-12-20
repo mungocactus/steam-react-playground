@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Images from '../components/Images'
-import randomUser from '../assets/images/random-users/random-user-8.jpg';
+import images from '../components/Images'
 
 class RandomUser extends React.Component {
   constructor() {
@@ -9,20 +8,28 @@ class RandomUser extends React.Component {
 
     this.state = {
       results: [],
-      images: Images
+      images: images
     };
 
     console.log(this.state);
 
     this.getRandomUser = this.getRandomUser.bind(this);
     this.getRandomImage = this.getRandomImage.bind(this);
+
+    this.randomUser = images.randomUser9.image;
+    console.log(this.randomUser);
   }
 
   getRandomImage() {
     // const randomUser = randomUser8;
-    console.log(Images, 'chinaman');
 
-    console.log(this.state.images);
+    this.setState({
+      images: images
+    })
+
+    const banannas = '/random-users/random-user-8.jpg';
+
+    console.log(banannas, 'chinaman');
 
   }
 
@@ -40,19 +47,21 @@ class RandomUser extends React.Component {
 
     this.getRandomImage();
 
-    console.log('state of this', this.state.results);
+    console.log('state of this', this.state.images);
   }
 
   render() {
     const {results} = this.state;
+    const {images} = this.state;
     console.log(results);
+    console.log(images);
 
     return (
       <div className='content'>
         <Navigation />
         <h1>Get your Random User</h1>
         <div className='user-content'>
-          <img src={randomUser} alt='random user' />
+          <img src={imageR} alt='random user' />
             <h3>Name</h3>
             {results.map(result => (
               <div className='info-container' key='result'>
