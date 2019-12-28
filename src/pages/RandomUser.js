@@ -15,21 +15,11 @@ class RandomUser extends React.Component {
 
     this.getRandomUser = this.getRandomUser.bind(this);
     this.getRandomImage = this.getRandomImage.bind(this);
-
-    this.randomUser = images.randomUser9.image;
-    console.log(this.randomUser);
   }
 
   getRandomImage() {
-    // const randomUser = randomUser8;
 
-    this.setState({
-      images: images
-    })
-
-    const banannas = '/random-users/random-user-8.jpg';
-
-    console.log(banannas, 'chinaman');
+    console.log('chinaman');
 
   }
 
@@ -46,37 +36,35 @@ class RandomUser extends React.Component {
     )
 
     this.getRandomImage();
-
-    console.log('state of this', this.state.images);
   }
 
   render() {
     const {results} = this.state;
     const {images} = this.state;
-    console.log(results);
-    console.log(images);
+    console.log('results', results);
+    console.log('images', images);
 
     return (
-      <div className='content'>
+      <div className='content randomuser'>
         <Navigation />
         <h1>Get your Random User</h1>
         <div className='user-content'>
-          <img src={imageR} alt='random user' />
+          <img src='/random-users/random-user-5.jpg' alt='random user' />
             <h3>Name</h3>
             {results.map(result => (
               <div className='info-container' key='result'>
-                <p key='first' >{result.name.first}</p>
-                <p key='last' >{result.name.last}</p>
+                <p key='first'>{result.name.first}</p>
+                <p key='last'>{result.name.last}</p>
               </div>
             ))}
             <h3>Address</h3>
             {results.map(result => (
               <div className='info-container' key='result'>
-                <p key='number' >{result.location.street.number}</p>
-                <p key='street' >{result.location.street.name},</p>
-                <p key='city' >{result.location.city},</p>
-                <p key='state' >{result.location.state},</p>
-                <p key='country' >{result.location.country}</p>
+                <p key='number'>{result.location.street.number}</p>
+                <p key='street'>{result.location.street.name},</p>
+                <p key='city'>{result.location.city},</p>
+                <p key='state'>{result.location.state},</p>
+                <p key='country'>{result.location.country}</p>
               </div>
             ))}
         </div>
