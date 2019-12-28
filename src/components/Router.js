@@ -1,7 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import RandomUser from '../pages/RandomUser';
 import App from './App';
+import RandomUser from '../pages/RandomUser';
+import ArtworkStatic from '../pages/ArtworkStatic';
+import ArtworkSlider from '../pages/ArtworkSlider';
+import Inventory from '../pages/Inventory';
+
 
 class Router extends React.Component {
   render() {
@@ -11,6 +15,9 @@ class Router extends React.Component {
           <Switch>
             <Route exact path='/' component={App} />
             <Route path='/randomuser' component={RandomUser} />
+            <Route path='/artwork' component={ArtworkStatic} />
+            <Route path='/artwork-slider' component={ArtworkSlider} />
+            <Route path='/inventory' component={Inventory} />
           </Switch>
         </BrowserRouter>
       </div>

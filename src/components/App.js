@@ -1,11 +1,11 @@
 import React from 'react';
-import Homepage from '../pages/Homepage';
+import HomePage from '../pages/HomePage';
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Homepage />
+        <HomePage />
       </React.Fragment>
     )
   }
