@@ -1,0 +1,20 @@
+ul {
+  margin: 0 40px;
+}
+
+.artwork {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 90px;
+
+  img {
+    max-width: 900px;
+  }
+}
+
+.artinfo {
+  margin-right: 20px;
+  max-width: 350px;
+  text-align: right;
+}
