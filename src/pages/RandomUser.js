@@ -55,7 +55,7 @@ class RandomUser extends React.Component {
     return (
       <div className='content randomuser'>
         <Navigation />
-        <div className='user-content'>
+        <section>
           <img src={this.randomImage} alt='random user' />
           <h3>Name</h3>
           {results.map(result => (
@@ -75,7 +75,7 @@ class RandomUser extends React.Component {
             </div>
           ))}
           <button onClick={this.getRandomUser}>Get New User</button>
-        </div>
+        </section>
       </div>
     )
   }

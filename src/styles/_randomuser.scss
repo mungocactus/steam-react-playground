@@ -1,7 +1,91 @@
 .content {
   &.randomuser {
-    flex-direction: row;
-    justify-content: center;
-    // position: relative;
+    section {
+      margin: 80px 50px 0;
+      max-width: 350px;
+      position: relative;
+
+      @media (min-width: 600px) {
+        margin-top: 125px;
+        max-width: 400px;
+      }
+
+      @media (min-width: 900px) {
+        max-width: 500px;
+      }
+
+      img {
+
+      }
+
+      h3 {
+        font-size: 12px;
+        margin: 17px 0 10px;
+
+        @media (min-width: 600px) {
+          font-size: 14px;
+        }
+
+        @media (min-width: 900px) {
+          font-size: 16px;
+        }
+      }
+
+      .info-container {
+        display: flex;
+        justify-content: center;
+
+        p {
+          font-size: 12px;
+          font-weight: 100;
+          letter-spacing: 1px;
+          margin-right: 5px;
+
+          @media (min-width: 600px) {
+            font-size: 14px;
+          }
+
+          @media (min-width: 900px) {
+            font-size: 16px;
+          }
+        }
+
+        &:nth-child(5) {
+          flex-direction: column;
+
+          p {
+            padding-bottom: 3px;
+          }
+
+          @media (min-width: 600px) {
+            flex-direction: row;
+
+            p {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+
+      div:last-child {
+        color: green;
+      }
+    }
+
+    button {
+      margin-bottom: 50px;
+      padding: 0 10px 4px;
+
+      &:hover {
+        background-color: #c2c2c2;
+      }
+
+      @media (min-width: 1200px) {
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        right: -200px;
+      }
+    }
   }
 }

@@ -31,11 +31,11 @@
 }
 
 .content {
-  // align-items: center;
+  align-items: center;
   background-color: $white;
   color: $grey;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   text-align: center;
 
@@ -68,47 +68,6 @@
 
   .clock {
     margin-top: 300px;
-  }
-
-  // &.randomuser {
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   // position: relative;
-  // }
-}
-
-.user-content {
-  margin: 125px 50px 0;
-  max-width: 500px;
-  position: relative;
-
-  h3 {
-    margin: 17px 0 10px;
-  }
-
-  .info-container {
-    display: flex;
-    justify-content: center;
-
-    p {
-      font-weight: 100;
-      letter-spacing: 1px;
-      margin-right: 5px;
-    }
-  }
-}
-
-.randomuser {
-  button {
-    margin-top: 0;
-    padding: 0 10px 4px;
-    position: absolute;
-    top: 40%;
-    right: -200px;
-
-    &:hover {
-      background-color: #c2c2c2;
-    }
   }
 }
 
