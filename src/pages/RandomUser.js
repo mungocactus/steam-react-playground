@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import images from '../components/Images'
 
@@ -54,6 +55,7 @@ class RandomUser extends React.Component {
 
     return (
       <div className='content randomuser'>
+        <Header />
         <Navigation />
         <section>
           <img src={this.randomImage} alt='random user' />
@@ -74,7 +76,7 @@ class RandomUser extends React.Component {
               <p key='country'>{result.location.country}</p>
             </div>
           ))}
-          <button onClick={this.getRandomUser}>Get New User</button>
+          <button className='randomuser-btn' onClick={this.getRandomUser}>Get New User</button>
         </section>
       </div>
     )
