@@ -1,73 +1,20 @@
-.homepage-content {
-  align-items: center;
-  background: url('../assets/images/steamgrafik-cover.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-
-  header {
-    text-align: center;
-  }
-
-  h1 {
-    color: #fff;
-  }
-
-  p {
-    color: #fff;
-    font-style: italic;
-    font-weight: 100;
-    letter-spacing: 10px;
-    margin: 60px 0 0;
-  }
-
-  img {
-    margin-top: 312px;
-  }
-}
-
 .content {
   align-items: center;
   background-color: $white;
   color: $grey;
   display: flex;
   min-height: 100vh;
+  // padding: 10px;
   flex-direction: column;
   text-align: center;
-
-  .navigation {
-    background-color: fade-out($black, .8);
-    padding: 10px 0;
-
-    a {
-      border-right: 1px solid $pale-grey;
-      color: $white;
-
-      &:last-child {
-        border: 0;
-      }
-
-      &:hover {
-        color: $mid-grey;
-      }
-    }
-  }
 
   h1 {
     font-size: 40px;
     margin: 50px 0 20px;
 
-    @media (min-width: 726px) {
+    @media (min-width: 701px) {
       font-size: 50px;
     }
-  }
-
-  .clock {
-    margin-top: 300px;
   }
 }
 

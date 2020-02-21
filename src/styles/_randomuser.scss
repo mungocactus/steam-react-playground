@@ -6,7 +6,6 @@
       position: relative;
 
       @media (min-width: 600px) {
-        margin-top: 125px;
         max-width: 400px;
       }
 
@@ -72,7 +71,8 @@
       }
     }
 
-    button {
+    .randomuser-btn {
+      margin-top: 30px;
       margin-bottom: 50px;
       padding: 0 10px 4px;
 
