@@ -28,13 +28,13 @@ header {
   right: 0;
   text-align: right;
   top: 0;
-  transform: translateY(-478px);
-  transition: transform .7s ease;
+  transform: translateY(-558px);
+  transition: transform 1s ease;
   width: 100%;
   z-index: 1;
 
   ul {
-    margin: 0 15px;
+    margin: 0 20px 0 0;
   }
 
   li {
@@ -42,15 +42,11 @@ header {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     width: 200px;
 
     &:hover {
       cursor: pointer;
-
-      // .disc {
-      //   background-color: $white;
-      // }
     }
   }
 
@@ -59,6 +55,10 @@ header {
     font-weight: 100;
     letter-spacing: 2px;
     text-decoration: none;
+
+    &:hover {
+      color: #eb7;
+    }
   }
 
   .disc {
@@ -72,7 +72,7 @@ header {
 
   &.open {
     transform: translateY(0);
-    transition: transform .7s ease;
+    transition: transform 1s ease;
   }
 }
 
@@ -101,20 +101,11 @@ img {
 }
 
 .menu-btn {
-  // background: url('../assets/images/menu-open-grey.png') no-repeat center;
-  // background-size: 100%;
   cursor: pointer;
-  // height: 30px;
   margin-right: 20px;
   padding: 10px;
   transform: rotate(45deg);
   transition: transform 1s ease;
-  // width: 30px;
-
-  // @media screen and (min-width: 501px) {
-  //   height: 35px;
-  //   width: 35px;
-  // }
 
   img {
     height: 35px;
@@ -123,8 +114,6 @@ img {
   }
 
   &.open {
-    // background: url('../assets/images/menu-close-grey.png') no-repeat center;
-    // background-size: 100%;
     transform: rotate(180deg);
     transition: transform 1s ease;
   }
