@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/images/logo-grey.png';
+import logo from '../assets/images/steamgrafik-logo-grey.png';
 import button from '../assets/images/menu-close-grey.png';
 
 class Header extends React.Component {
