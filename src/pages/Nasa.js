@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import AsteroidSizes from '../components/AsteroidSizes';
 import AsteroidSpeeds from '../components/AsteroidSpeeds';
-import { convertToMeters } from '../helpers';
 
 class Nasa extends React.Component {
   constructor() {

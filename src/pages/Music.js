@@ -5,9 +5,6 @@ import Search from '../components/Search';
 
 
 class Music extends React.Component {
-  constructor() {
-    super();
-  }
 
   render() {
     return (
