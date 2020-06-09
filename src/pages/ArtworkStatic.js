@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Artwork from '../components/Artwork';
 import Basket from '../components/Basket';
@@ -23,11 +24,14 @@ class ArtworkStatic extends React.Component {
     console.log(this.state.artworks);
     return (
       <div className='content'>
+        <Header />
         <Navigation />
-        <h1>Artwork for Sale</h1>
-        <ul>
-          {Object.keys(this.state.artworks).map(art => <Artwork key={art} artinfo={this.state.artworks[art]} />)}
-        </ul>
+        <section className='artwork'>
+          <h1>Artwork for Sale</h1>
+          <ul>
+            {Object.keys(this.state.artworks).map(art => <Artwork key={art} artinfo={this.state.artworks[art]} />)}
+          </ul>
+        </section>
         <Basket />
       </div>
     )

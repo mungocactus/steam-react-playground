@@ -6,14 +6,14 @@ class Navigation extends React.Component {
     return (
       <div className='navigation'>
         <ul>
-          <li><a href='/randomuser'>Random User</a><div class='disc'></div></li>
-          <li><a href='/artwork'>Artwork</a><div class='disc'></div></li>
-          <li><a href='/artwork-slider'>Artwork Slider</a><div class='disc'></div></li>
-          <li><a href='/inventory'>Inventory</a><div class='disc'></div></li>
-          <li><a href='/artwork'>NASA</a><div class='disc'></div></li>
-          <li><a href='/artwork-slider'>Weather</a><div class='disc'></div></li>
-          <li><a href='/inventory'>Financial Markets</a><div class='disc'></div></li>
-          <li><a href='/'>Home</a><div class='disc'></div></li>
+          <li><a href='/randomuser'>Random User</a></li>
+          <li><a href='/artwork'>Artwork</a></li>
+          <li><a href='/artwork-slider'>Artwork Slider</a></li>
+          <li><a href='/inventory'>Inventory</a></li>
+          <li><a href='/nasa'>NASA</a></li>
+          <li><a href='/weather'>Weather</a></li>
+          <li><a href='/music'>Music</a></li>
+          <li><a href='/'>Home</a></li>
         </ul>
       </div>
     )

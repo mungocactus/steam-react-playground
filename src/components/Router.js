@@ -5,6 +5,8 @@ import RandomUser from '../pages/RandomUser';
 import ArtworkStatic from '../pages/ArtworkStatic';
 import ArtworkSlider from '../pages/ArtworkSlider';
 import Inventory from '../pages/Inventory';
+import Nasa from '../pages/Nasa';
+import Music from '../pages/Music';
 
 
 class Router extends React.Component {
@@ -18,6 +20,8 @@ class Router extends React.Component {
             <Route path='/artwork' component={ArtworkStatic} />
             <Route path='/artwork-slider' component={ArtworkSlider} />
             <Route path='/inventory' component={Inventory} />
+            <Route path='/nasa' component={Nasa} />
+            <Route path='/music' component={Music} />
           </Switch>
         </BrowserRouter>
       </div>
