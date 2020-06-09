@@ -94,6 +94,11 @@ class Nasa extends React.Component {
               <h2 className='name-speed'>Earth</h2>
               <p className='speed'>107,000 kmph</p>
             </li>
+            <li className='asteroid-speed-iss'>
+              <h2 className='name-speed'>ISS</h2>
+              <p>International Space Station</p>
+              <p className='speed'>17,150 kmph</p>
+            </li>
             <li className='asteroid-speed-sound'>
               <h2 className='name-speed'>Speed of Sound</h2>
               <p className='speed'>1,236 kmph</p>
