@@ -27,6 +27,7 @@ class RandomUser extends React.Component {
         this.setState({
           results: result.results
         });
+        console.log(result);
       }
     )
   }
@@ -54,10 +55,10 @@ class RandomUser extends React.Component {
     console.log('images', images);
 
     return (
-      <div className='content randomuser'>
+      <div className='content'>
         <Header />
         <Navigation />
-        <section>
+        <section className='randomuser'>
           <img src={this.randomImage} alt='random user' />
           <h3>Name</h3>
           {results.map(result => (

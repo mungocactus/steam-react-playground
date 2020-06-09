@@ -1,12 +1,19 @@
-ul {
-  margin: 0 40px;
-}
+
+
 
 .artwork {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 90px;
+  font-family: 'Roboto Mono', monospace;
+
+  ul {
+    margin: 0 40px;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 90px;
+  }
 
   img {
     max-width: 900px;

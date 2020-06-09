@@ -1,0 +1,100 @@
+.nasa {
+  background-color: #000;
+
+  section {
+    padding-bottom: 150px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 42px;
+    margin: 50px 0;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+}
+
+.nasa-info {
+  padding: 0 50px;
+}
+
+.nasa-image {
+  background-color: #000;
+  height: 80vh;
+  width: 100%;
+
+  img {
+    height: 80vh;
+    width: auto;
+  }
+}
+
+.asteroids-title {
+  color: #f78102;
+  font-style: normal;
+}
+
+.asteroids {
+  h1 {
+    font-style: italic;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px;
+  }
+
+  .circle {
+    background-color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+
+.asteroid-speed-container {
+  margin: 60px auto;
+  max-width: 1000px;
+
+  li {
+    background-color: #f78102;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    margin-bottom: 25px;
+    width: 100%;
+
+    &.asteroid-speed-earth {
+      background-color: $earth;
+    }
+
+    h2 {
+      color: #fff;
+      margin-left: 15px;
+      white-space: nowrap;
+    }
+
+    p {
+      color: #fff;
+      font-style: italic;
+      letter-spacing: 1px;
+      margin: 2px 0 0 15px;
+      white-space: nowrap;
+    }
+  }
+
+  .asteroid-speed-earth {
+    background-color: #05c0b9;
+  }
+
+  .asteroid-speed-sound {
+    background-color: #f78102;
+    width: 1%;
+  }
+}
