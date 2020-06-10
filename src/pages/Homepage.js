@@ -9,6 +9,7 @@ class HomePage extends React.Component {
       <div className='homepage-content'>
         <Header />
         <Navigation />
+        <p>A little PROJECT by PAUL HESS</p>
         <Clock />
       </div>
     )
