@@ -13,8 +13,8 @@ header {
   z-index: 3;
 
   img {
-    width: 130px;
-    margin: 15px 30px 0;
+    width: 150px;
+    margin: 16px 30px 0;
   }
 }
 
@@ -32,20 +32,37 @@ header {
   width: 100%;
   z-index: 1;
 
-  ul {
-    margin: 0 0 0 75px;
-  }
-
   li {
     align-items: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     list-style-type: none;
-    padding-bottom: 30px;
-    width: 200px;
+    margin-bottom: 23px;
+    padding-bottom: 3px;
+    position: relative;
+    width: 150px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 51%;
+      right: 51%;
+      bottom: -3px;
+      background: $grey;
+      height: 1px;
+      transition-property: left, right;
+      transition-duration: .3s;
+      transition-timing-function: ease-out;
+    }
 
     &:hover {
       cursor: pointer;
+
+      &:before {
+        left: 0;
+        right: 0;
+      }
     }
   }
 
@@ -54,10 +71,6 @@ header {
     font-weight: 100;
     letter-spacing: 2px;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &.open {
@@ -92,15 +105,25 @@ img {
 
 .menu-btn {
   cursor: pointer;
-  margin-right: 20px;
-  padding: 10px;
+  margin-right: 5px;
+  padding: 8px;
   transform: rotate(45deg);
   transition: transform 1s ease;
 
+  @media (min-width: 501px) {
+    padding: 10px;
+    margin-right: 10px;
+  }
+
   img {
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     margin: 0;
+
+    @media (min-width: 501px) {
+      height: 30px;
+      width: 30px;
+    }
   }
 
   &.open {
