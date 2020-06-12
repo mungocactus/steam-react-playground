@@ -19,8 +19,8 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <img src={logo} alt='logo'/>
-        <div className="menu-btn" onClick={this.toggleNavigation}>
+        <a href='/'><img src={logo} alt='logo'/></a>
+        <div className='menu-btn' onClick={this.toggleNavigation}>
           <img src={button} alt='button'/>
         </div>
       </header>

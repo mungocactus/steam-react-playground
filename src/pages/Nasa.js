@@ -67,10 +67,12 @@ class Nasa extends React.Component {
             <p>{image.explanation}</p>
           </div>
         </section>
-        <h1 className='asteroids-title'>Daily Asteroids are Go!</h1>
-        <p>NASA publishes a list each day of asteroids based on when they are at their closest to Earth.</p>
-        <p className='red'>Those in red are considered potentially hazardous to Earth.</p>
-        <section className='asteroids'>
+        <section className='asteroid-belt'>
+          <h1>Daily Asteroids are Go!</h1>
+          <p>Each day NASA publishes a list of asteroids based on when they are at their closest point to Earth.</p>
+          <p className='red'>Those in red are considered potentially hazardous to Earth.</p>
+        </section>
+        <section className='asteroid-sizes'>
           <h1>Asteroids</h1>
           <ul>
             {Object.keys(asteroids).map(key =>
@@ -80,10 +82,10 @@ class Nasa extends React.Component {
               asteroidSizes={asteroids[key]}
               />)}
           </ul>
-          </section>
-          <section className='asteroids'>
+        </section>
+        <section className='asteroid-speeds'>
           <h1>Asteroid Speeds</h1>
-          <ul className='asteroid-speed-container'>
+          <ul>
             {Object.keys(asteroids).map(key =>
               <AsteroidSpeeds
               key={key}
