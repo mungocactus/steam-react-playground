@@ -74,6 +74,10 @@ class Nasa extends React.Component {
         </section>
         <section className='asteroid-sizes'>
           <h1>Asteroids</h1>
+          <h2>NAME</h2>
+          <p>size</p>
+          <p>speed</p>
+          <p>closest distance to Earth</p>
           <ul>
             {Object.keys(asteroids).map(key =>
               <AsteroidSizes
