@@ -46,6 +46,10 @@
   }
 
   .asteroid-sizes {
+    ul {
+      margin-top: 50px;
+    }
+
     li {
       display: flex;
       flex-direction: column;
@@ -58,8 +62,13 @@
       border-radius: 50%;
       height: 30px;
       width: 30px;
-      max-height: 375px;
-      max-width: 375px;
+      max-height: 320px;
+      max-width: 320px;
+
+      @media (min-width: 375px) {
+        max-height: 373px;
+        max-width: 373px;
+      }
 
       @media (min-width: 501px) {
         max-height: 501px;
@@ -85,7 +94,7 @@
     width: 100%;
 
     h1 {
-      margin-top: 35px;
+      margin-top: 10px;
     }
 
     ul {
@@ -116,9 +125,10 @@
 
         p {
           color: #fff;
+          font-size: 12px;
           font-style: italic;
           letter-spacing: 1px;
-          margin: 2px 0 0 10px;
+          margin: 3px 0 0 10px;
           white-space: nowrap;
         }
       }

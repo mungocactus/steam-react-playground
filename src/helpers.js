@@ -13,3 +13,7 @@ export function convertToThousands(number) {
 export function convertToMetersThousands(number) {
   return Math.round(number * 1000).toLocaleString();
 }
+
+export function removeParentheses(name) {
+  return name.replace(/[\)(]/g, '');
+}

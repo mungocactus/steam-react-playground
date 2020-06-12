@@ -1,5 +1,5 @@
 import React from 'react';
-import { removeDecimal, convertToThousands } from '../helpers'
+import { removeDecimal, convertToThousands, removeParentheses } from '../helpers'
 
 class AsteroidSpeeds extends React.Component {
 
@@ -10,7 +10,7 @@ class AsteroidSpeeds extends React.Component {
 
     return (
       <li className='asteroid-speed' style={dangerous ? {width:speed + '%', backgroundColor:'red'} : {width:speed + '%', backgroundColor:'#999'}}>
-        <h2 className='name-speed'>{asteroidSpeeds.name.slice(1, -1)}</h2>
+        <h2 className='name-speed'>{removeParentheses(asteroidSpeeds.name)}</h2>
         <p className='speed'>{convertToThousands(asteroidSpeeds.close_approach_data["0"].relative_velocity.kilometers_per_hour)} kmph</p>
       </li>
     )
