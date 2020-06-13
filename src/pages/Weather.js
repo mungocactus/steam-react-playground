@@ -5,7 +5,7 @@ import Wip from '../components/Wip';
 import Search from '../components/Search';
 
 
-class Music extends React.Component {
+class Weather extends React.Component {
 
   render() {
     return (
@@ -13,11 +13,11 @@ class Music extends React.Component {
         <Header />
         <Navigation />
         <Wip />
-        <h1>Music</h1>
+        <h1>Weather</h1>
         <Search />
       </div>
     )
   }
 }
 
-export default Music
+export default Weather

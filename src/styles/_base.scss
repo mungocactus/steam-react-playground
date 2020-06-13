@@ -109,14 +109,18 @@ img {
 
 .menu-btn {
   cursor: pointer;
+  height: 25px;
+  width: 25px;
   margin-right: 5px;
   padding: 8px;
   transform: rotate(45deg);
   transition: transform 1s ease;
 
   @media (min-width: 501px) {
-    padding: 10px;
+    height: 30px;
+    width: 30px;
     margin-right: 10px;
+    padding: 10px;
   }
 
   img {

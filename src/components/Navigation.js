@@ -7,12 +7,12 @@ class Navigation extends React.Component {
       <div className='navigation'>
         <ul>
           <li><a href='/nasa'>NASA</a></li>
-          <li><a href='/weather'>Weather</a></li>
-          <li><a href='/music'>Music</a></li>
+          <li className='wip-link'><a href='/weather'>Weather</a></li>
+          <li className='wip-link'><a href='/music'>Music</a></li>
           <li><a href='/randomuser'>Random User</a></li>
-          <li><a href='/artwork'>Artwork</a></li>
-          <li><a href='/artwork-slider'>Artwork Slider</a></li>
-          <li><a href='/inventory'>Inventory</a></li>
+          <li className='wip-link'><a href='/artwork'>Artwork</a></li>
+          <li className='wip-link'><a href='/artwork-slider'>Artwork Slider</a></li>
+          <li className='wip-link'><a href='/inventory'>Inventory</a></li>
           <li><a href='/'>Home</a></li>
         </ul>
       </div>
