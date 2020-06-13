@@ -1,5 +1,7 @@
 import React from 'react';
+import Header from '../components/Header';
 import Navigation from '../components/Navigation';
+import Wip from '../components/Wip';
 
 class Inventory extends React.Component {
   constructor() {
@@ -32,7 +34,9 @@ class Inventory extends React.Component {
   render() {
     return (
       <div className='content inventory'>
+        <Header />
         <Navigation />
+        <Wip />
         <h1>Inventory</h1>
         <form onSubmit={this.createNewArtwork}>
           <input name='title' ref={this.titleRef} type='text' placeholder='artwork title'/>
