@@ -33,17 +33,17 @@
 .asteroids {
   background-color: #000;
   min-height: min-content;
+  padding: 0 5px;
+
+  @media (min-width: 501px) {
+    padding: 0 20px;
+  }
 
   h1 {
     color: $grey;
     font-size: 42px;
     margin: 50px 0 25px;
   }
-
-  // p {
-  //   margin: 0 auto;
-  //   max-width: 1300px;
-  // }
 
   section {
     margin-bottom: 50px;
@@ -52,6 +52,10 @@
   .asteroid-belt {
     h1 {
       color: $white;
+    }
+
+    p {
+      padding: 0 15px;
     }
   }
 

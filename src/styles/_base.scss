@@ -148,6 +148,32 @@ input {
   width: 300px;
 }
 
+.video {
+  height: 211px;
+  width: 375px;
+  margin: 0 auto;
+
+  @media (min-width: 501px) {
+    height: 281px;
+    width: 499px;
+  }
+
+  @media (min-width: 901px) {
+    height: 422px;
+    width: 750px;
+  }
+
+  @media (min-width: 1201px) {
+    height: 562px;
+    width: 1000px;
+  }
+}
+
+// .react-player {
+//   height: 100%;
+//   width: auto;
+// }
+
 .red {
   color: red;
 }
