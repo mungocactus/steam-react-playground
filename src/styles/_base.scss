@@ -149,31 +149,40 @@ input {
 }
 
 .video {
-  height: 211px;
-  width: 375px;
+  height: 180px;
+  width: 320px;
   margin: 0 auto;
+
+  @media (min-width: 375px) {
+    height: 197px;
+    width: 350px;
+  }
 
   @media (min-width: 501px) {
     height: 281px;
     width: 499px;
   }
 
+  @media (min-width: 701px) {
+    height: 393px;
+    width: 699px;
+  }
+
   @media (min-width: 901px) {
-    height: 422px;
-    width: 750px;
+    height: 506px;
+    width: 899px;
   }
 
   @media (min-width: 1201px) {
-    height: 562px;
-    width: 1000px;
+    height: 674px;
+    width: 1199px;
   }
 }
 
-// .react-player {
-//   height: 100%;
-//   width: auto;
-// }
-
 .red {
   color: red;
+}
+
+.hide {
+  display: none;
 }

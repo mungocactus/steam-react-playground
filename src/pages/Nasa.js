@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import AsteroidSizes from '../components/AsteroidSizes';
@@ -54,6 +53,7 @@ class Nasa extends React.Component {
     const {image} = this.state;
     const {asteroids} = this.state;
     console.log(image.url);
+    console.log(image.media_type);
     console.log('asteroids', asteroids);
 
     return (
@@ -62,8 +62,8 @@ class Nasa extends React.Component {
           <Header />
           <Navigation />
           <section>
-            <div className='video'>
-              <ReactPlayer className='react-player' url={image.url} controls='true' width='auto' height='100%' />
+            <div className='nasa-image'>
+              <img src={image.url} alt='nasa of the day' />
             </div>
             <div className='nasa-info'>
               <h1>{image.title}</h1>
