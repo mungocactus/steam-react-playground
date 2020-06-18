@@ -7,7 +7,7 @@ import ArtworkSlider from '../pages/ArtworkSlider';
 import Inventory from '../pages/Inventory';
 import Nasa from '../pages/Nasa';
 import Music from '../pages/Music';
-import Weather from '../pages/Weather';
+import CurrentWeather from '../pages/CurrentWeather';
 
 class Router extends React.Component {
   render() {
@@ -22,7 +22,7 @@ class Router extends React.Component {
             <Route path='/inventory' component={Inventory} />
             <Route path='/nasa' component={Nasa} />
             <Route path='/music' component={Music} />
-            <Route path='/weather' component={Weather} />
+            <Route path='/weather' component={CurrentWeather} />
           </Switch>
         </BrowserRouter>
       </div>

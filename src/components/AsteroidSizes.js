@@ -7,6 +7,8 @@ class AsteroidSizes extends React.Component {
     const asteroidSizes = this.props.asteroidSizes;
     const diameter = Math.round(convertToMeters(asteroidSizes.estimated_diameter.kilometers.estimated_diameter_max) / 4);
     const dangerous = asteroidSizes.is_potentially_hazardous_asteroid;
+    console.log(asteroidSizes.estimated_diameter.kilometers.estimated_diameter_max);
+    console.log(asteroidSizes);
 
     return (
       <li style={dangerous ? {color:'red'} : {color:'#999'}}>
