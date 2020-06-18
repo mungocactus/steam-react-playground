@@ -10,7 +10,8 @@ class Nasa extends React.Component {
 
     this.state = {
       time: new Date(),
-      image: {},
+      imageInfo: {},
+      image: '/black-placeholder.jpg',
       asteroids: {}
     }
 
@@ -24,8 +25,10 @@ class Nasa extends React.Component {
     .then(data => {
       console.log(data);
       this.setState({
-        image: data
+        imageInfo: data,
+        image: data.url
       });
+      console.log(data);
     })
     .catch('Nothing came back, ouch!')
   }
@@ -50,10 +53,13 @@ class Nasa extends React.Component {
   }
 
   render() {
-    const {image} = this.state;
+    const imageInfo = this.state.imageInfo;
+    console.log(imageInfo);
+    const image = this.state.image;
     const {asteroids} = this.state;
-    console.log(image.url);
-    console.log(image.media_type);
+    console.log(imageInfo);
+    console.log(image);
+    // console.log(imageInfo.media_type);
     console.log('asteroids', asteroids);
 
     return (
@@ -63,11 +69,11 @@ class Nasa extends React.Component {
           <Navigation />
           <section>
             <div className='nasa-image'>
-              <img src={image.url} alt='nasa of the day' />
+              <img src={image} alt='nasa of the day' />
             </div>
             <div className='nasa-info'>
-              <h1>{image.title}</h1>
-              <p>{image.explanation}</p>
+              <h1>{imageInfo.title}</h1>
+              <p>{imageInfo.explanation}</p>
             </div>
           </section>
         </div>

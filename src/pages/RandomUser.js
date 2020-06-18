@@ -8,11 +8,15 @@ class RandomUser extends React.Component {
     super();
 
     this.state = {
-      results: [],
+      nameFirst: 'Bob',
+      nameLast: 'Dylan',
+      streetNumber: '112',
+      streetName: 'Ashleigh Road',
+      city: 'Mortlake',
+      stateCounty: 'London',
+      country: 'United Kingdom',
       images: images
     };
-
-    console.log(this.state);
 
     this.randomUser = this.randomUser.bind(this);
     this.getRandomImage = this.getRandomImage.bind(this);
@@ -22,12 +26,16 @@ class RandomUser extends React.Component {
   randomUser() {
     fetch('https://randomuser.me/api/?results=1')
     .then(response => response.json())
-    .then(
-      (result) => {
+    .then(data => {
         this.setState({
-          results: result.results
+          nameFirst: data.results['0'].name.first,
+          nameLast: data.results['0'].name.last,
+          streetNumber: data.results['0'].location.street.number,
+          streetName: data.results['0'].location.street.name,
+          city: data.results['0'].location.city,
+          stateCounty: data.results['0'].location.state,
+          country: data.results['0'].location.country
         });
-        console.log(result);
       }
     )
   }
@@ -49,9 +57,15 @@ class RandomUser extends React.Component {
   }
 
   render() {
-    const {results} = this.state;
     const {images} = this.state;
-    console.log('results', results);
+    const nameFirst = this.state.nameFirst;
+    const nameLast = this.state.nameLast;
+    const streetNumber = this.state.streetNumber;
+    const streetName = this.state.streetName;
+    const city = this.state.city;
+    const stateCounty = this.state.stateCounty;
+    const country = this.state.country;
+
     console.log('images', images);
 
     return (
@@ -61,22 +75,18 @@ class RandomUser extends React.Component {
         <section className='randomuser'>
           <img src={this.randomImage} alt='random user' />
           <h3>Name</h3>
-          {results.map(result => (
-            <div className='info-container' key='result'>
-              <p key='first'>{result.name.first}</p>
-              <p key='last'>{result.name.last}</p>
-            </div>
-          ))}
+          <div className='info-container'>
+            <p>{nameFirst}</p>
+            <p>{nameLast}</p>
+          </div>
           <h3>Address</h3>
-          {results.map(result => (
-            <div className='info-container' key='result'>
-              <p key='number'>{result.location.street.number}</p>
-              <p key='street'>{result.location.street.name},</p>
-              <p key='city'>{result.location.city},</p>
-              <p key='state'>{result.location.state},</p>
-              <p key='country'>{result.location.country}</p>
-            </div>
-          ))}
+          <div className='info-container'>
+            <p>{streetNumber}</p>
+            <p>{streetName},</p>
+            <p>{city},</p>
+            <p>{stateCounty},</p>
+            <p>{country}</p>
+          </div>
           <button className='randomuser-btn' onClick={this.getRandomUser}>Get New User</button>
         </section>
       </div>
