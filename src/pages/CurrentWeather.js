@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
-import Wip from '../components/Wip';
 
 class CurrentWeather extends React.Component {
   constructor() {
@@ -56,21 +55,27 @@ class CurrentWeather extends React.Component {
       <div className='content'>
         <Header />
         <Navigation />
-        <Wip />
-        <h1>Weather</h1>
-        <p>Current temperature</p>
-        <h1>{temp}</h1>
-        <p>Wind Speed</p>
-        <p>{windSpeed}</p>
-        <p>Wind Direction</p>
-        <p>{windDirection}</p>
-        <p>Pressure</p>
-        <p>{pressure}</p>
-        <p>Humidity</p>
-        <p>{humidity}</p>
-        <p>{location}</p>
-        <p>{overall}</p>
-        <p>{description}</p>
+        <div className='weather'>
+          <h1>Weather Today</h1>
+          <p className='location'>{location}</p>
+          <div className='temp'>
+            <p>Current temperature</p>
+            <h1>{Math.round(temp)}</h1>
+          </div>
+          <div className='overall'>
+            <h2>{overall}</h2>
+            <p>{description}</p>
+          </div>
+          <div className='conditions'>
+            <p>Humidity</p>
+            <p>{humidity}</p>
+            <p>Pressure</p>
+            <p>{pressure}</p>
+            <p>Wind</p>
+            <p>{windSpeed}</p>
+            <p>{windDirection}</p>
+          </div>
+        </div>
       </div>
     )
   }
