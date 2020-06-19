@@ -113,8 +113,7 @@ class Nasa extends React.Component {
               </li>
               <li className='asteroid-speed-iss'>
                 <h2 className='name-speed'>ISS</h2>
-                <p>International Space Station</p>
-                <p className='speed'>17,150 kmph</p>
+                <p className='speed'>International Space Station 17,150 kmph</p>
               </li>
               <li className='asteroid-speed-sound'>
                 <h2 className='name-speed'>Speed of Sound</h2>
