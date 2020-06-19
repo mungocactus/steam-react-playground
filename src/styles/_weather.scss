@@ -1,0 +1,36 @@
+.weather {
+  color: $black;
+  font-family: 'Oswald', sans-serif;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 33px;
+  }
+
+  .location {
+    margin: 5px 0 30px;
+  }
+
+  .temp {
+    h1 {
+      font-size: 130px;
+      letter-spacing: -7px;
+      margin-top: 0;
+    }
+  }
+
+  .overall {
+    margin-bottom: 90px;
+  }
+
+  .conditions {
+    margin-bottom: 60px;
+  }
+}
