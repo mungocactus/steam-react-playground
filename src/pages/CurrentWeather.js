@@ -67,12 +67,16 @@ class CurrentWeather extends React.Component {
             <p>{description}</p>
           </div>
           <div className='conditions'>
-            <p>Humidity</p>
-            <p>{humidity}</p>
-            <p>Pressure</p>
-            <p>{pressure}</p>
-            <p>Wind</p>
-            <p>{windSpeed}</p>
+            <h3>Humidity</h3>
+            <h3>{humidity}%</h3>
+          </div>
+          <div className='conditions'>
+            <h3>Pressure</h3>
+            <h3>{pressure}</h3>
+          </div>
+          <div className='conditions'>
+            <h3>Wind</h3>
+            <h3>{Math.round(windSpeed * 3.6)} kmph</h3>
             <p>{windDirection}</p>
           </div>
         </div>
