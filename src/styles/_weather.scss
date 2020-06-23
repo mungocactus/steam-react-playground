@@ -25,11 +25,9 @@
   }
 
   .temp {
-    h1 {
-      font-size: 130px;
-      letter-spacing: -7px;
-      margin-top: 0;
-    }
+    font-size: 130px;
+    letter-spacing: -7px;
+    margin: 0 0 45px;
   }
 
   .overall {
@@ -37,11 +35,44 @@
 
     p {
       font-family: 'Playfair Display', serif;
-      font-size: 23px;
+      font-size: 16px;
     }
   }
 
   .conditions {
     margin-bottom: 30px;
   }
+}
+
+.freeze {
+  color: #cceaf2;
+}
+
+.cold {
+  color: #e0e2e2;
+}
+
+.cool {
+  color: #bfbebb;
+}
+
+.mild {
+  color: #9f8c7d;
+}
+
+.warm {
+  color: #e0874a;
+}
+
+.hot {
+  color: #ffb600;
+}
+
+.wind-warning {
+  fill: red;
+}
+
+.wind-direction {
+  margin: 0 auto;
+  width: 70px;
 }
