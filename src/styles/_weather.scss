@@ -5,7 +5,7 @@
   h1 {
     font-size: 40px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 
   h2 {
@@ -14,23 +14,65 @@
     margin-bottom: 33px;
   }
 
+  h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
   .location {
+    font-size: 22px;
     margin: 5px 0 30px;
   }
 
   .temp {
-    h1 {
-      font-size: 130px;
-      letter-spacing: -7px;
-      margin-top: 0;
-    }
+    font-size: 130px;
+    letter-spacing: -7px;
+    margin: 0 0 45px;
   }
 
   .overall {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
+
+    p {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+    }
   }
 
   .conditions {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
+}
+
+.freeze {
+  color: #cceaf2;
+}
+
+.cold {
+  color: #e0e2e2;
+}
+
+.cool {
+  color: #bfbebb;
+}
+
+.mild {
+  color: #9f8c7d;
+}
+
+.warm {
+  color: #e0874a;
+}
+
+.hot {
+  color: #ffb600;
+}
+
+.wind-warning {
+  fill: red;
+}
+
+.wind-direction {
+  margin: 0 auto;
+  width: 70px;
 }
