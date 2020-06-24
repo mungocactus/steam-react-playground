@@ -1,6 +1,19 @@
+.weather-today {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 901px) {
+    flex-direction: row;
+  }
+}
+
 .weather {
   color: $black;
   font-family: 'Oswald', sans-serif;
+
+  @media (min-width: 901px) {
+    margin: 60px 200px;
+  }
 
   h1 {
     font-size: 40px;
@@ -31,7 +44,7 @@
   }
 
   .overall {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     p {
       font-family: 'Playfair Display', serif;
@@ -41,6 +54,23 @@
 
   .conditions {
     margin-bottom: 30px;
+  }
+
+  &:last-child {
+    @media (min-width: 901px) {
+      margin: 0;
+    }
+  }
+}
+
+.weather-divider {
+  border-top: 4px solid $black;
+  height: 40px;
+  margin: 0 auto;
+  width: 110px;
+
+  @media (min-width: 901px) {
+    height: 20px;
   }
 }
 
@@ -74,5 +104,6 @@
 
 .wind-direction {
   margin: 0 auto;
+  padding: 10px;
   width: 70px;
 }
