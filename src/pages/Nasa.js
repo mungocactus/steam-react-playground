@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import AsteroidSizes from '../components/AsteroidSizes';
 import AsteroidSpeeds from '../components/AsteroidSpeeds';
+import LoaderSpinner from '../components/LoaderSpinner';
 
 class Nasa extends React.Component {
   constructor() {
@@ -11,7 +12,7 @@ class Nasa extends React.Component {
     this.state = {
       time: new Date(),
       imageInfo: {},
-      image: '/black-placeholder.jpg',
+      image: '/blank-placeholder.png',
       asteroids: {}
     }
 
@@ -70,6 +71,7 @@ class Nasa extends React.Component {
           <section>
             <div className='nasa-image'>
               <img src={image} alt='nasa of the day' />
+              <LoaderSpinner />
             </div>
             <div className='nasa-info'>
               <h1>{imageInfo.title}</h1>

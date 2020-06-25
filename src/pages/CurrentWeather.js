@@ -54,7 +54,7 @@ class CurrentWeather extends React.Component {
     const temp = Math.round(temperature);
     let tempColour = 'temp';
     temp < 0 ? tempColour = 'temp freeze' : temp < 6 ? tempColour = 'temp cold' : temp < 10 ? tempColour = 'temp cool' : temp < 14 ? tempColour = 'temp' :
-    temp < 17 ? tempColour = 'temp mild' : temp < 20 ? tempColour = 'temp warm' : temp < 25 ? tempColour = 'temp hot' : tempColour = 'temp red';
+    temp < 17 ? tempColour = 'temp mild' : temp < 20 ? tempColour = 'temp warm' : temp < 26 ? tempColour = 'temp hot' : tempColour = 'temp red';
 
     const rotate = {transform: `rotate(${windDirection}deg)`};
 

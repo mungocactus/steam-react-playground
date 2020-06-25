@@ -1,0 +1,65 @@
+
+$spinner-color: #e0e0e0;
+$spinner-size: 100px;
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 0;
+}
+
+.spinner {
+  font-size: $spinner-size;
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+
+  &.center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .spinner-blade {
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    transform-origin: center -18px;
+    animation: spinner-fade 1s infinite linear;
+
+    $animation-delay: 0s;
+    $blade-rotation: 0deg;
+
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: $animation-delay;
+        transform: rotate($blade-rotation);
+        $blade-rotation: $blade-rotation + 45;
+        $animation-delay: $animation-delay + .125;
+      }
+    }
+
+    @keyframes spinner-fade {
+      0% {
+        background-color: $spinner-color;
+      }
+      100% {
+        background-color: transparent;
+      }
+    }
+  }
+}
