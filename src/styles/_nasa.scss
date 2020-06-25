@@ -23,10 +23,14 @@
   }
 
   .nasa-image {
+    position: relative;
+
     img {
       max-height: 80vh;
       max-width: 100%;
+      position: relative;
       width: auto;
+      z-index: 1;
     }
   }
 }
