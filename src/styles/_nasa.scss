@@ -22,27 +22,6 @@
     }
   }
 
-  .loader-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 200px;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    top: 0;
-  }
-
-  .loader {
-    background-color: #fff;
-    border-radius: 50%;
-    margin: auto;
-    height: 80px;
-    width: 80px;
-    // z-index: 3;
-  }
-
   .nasa-image {
     position: relative;
 
