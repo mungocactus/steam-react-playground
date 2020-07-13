@@ -9,7 +9,7 @@ class AsteroidSpeeds extends React.Component {
     const dangerous = asteroidSpeeds.is_potentially_hazardous_asteroid;
 
     return (
-      <li className='asteroid-speed' style={dangerous ? {width:speed + '%', backgroundColor:'red'} : {width:speed + '%', backgroundColor:'#999'}}>
+      <li className='asteroid-speed' style={dangerous ? {width:speed + '%', backgroundImage:'linear-gradient(to right, #000, red)'} : {width:speed + '%', backgroundImage:'linear-gradient(to right, #000, #999)'}}>
         <h2 className='name-speed'>{removeParentheses(asteroidSpeeds.name)}</h2>
         <p className='speed'>{convertToThousands(asteroidSpeeds.close_approach_data["0"].relative_velocity.kilometers_per_hour)} kmph</p>
       </li>
