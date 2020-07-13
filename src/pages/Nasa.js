@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
+import NasaImageDaily from '../components/NasaImageDaily';
 import AsteroidSizes from '../components/AsteroidSizes';
 import AsteroidSpeeds from '../components/AsteroidSpeeds';
-import LoaderSpinner from '../components/LoaderSpinner';
 
 class Nasa extends React.Component {
   constructor() {
@@ -12,7 +12,7 @@ class Nasa extends React.Component {
     this.state = {
       time: new Date(),
       imageInfo: {},
-      image: '/blank-placeholder.png',
+      imageDaily: '/blank-placeholder.png',
       asteroids: {}
     }
 
@@ -27,11 +27,11 @@ class Nasa extends React.Component {
       console.log(data);
       this.setState({
         imageInfo: data,
-        image: data.url
+        imageDaily: data.url
       });
       console.log(data);
     })
-    .catch('Nothing came back, ouch!')
+    .catch('Nothing came back, ouch!');
   }
 
   componentDidMount() {
@@ -45,7 +45,6 @@ class Nasa extends React.Component {
     fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date&api_key=bdwaDHFx7h0ReuIY1kiocxb3dZ9Cig3xMKe240Y7")
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       this.setState({
         asteroids: data.near_earth_objects[todaysDate]
       });
@@ -55,13 +54,8 @@ class Nasa extends React.Component {
 
   render() {
     const imageInfo = this.state.imageInfo;
-    console.log(imageInfo);
-    const image = this.state.image;
+    const imageDaily = this.state.imageDaily;
     const {asteroids} = this.state;
-    console.log(imageInfo);
-    console.log(image);
-    // console.log(imageInfo.media_type);
-    console.log('asteroids', asteroids);
 
     return (
       <React.Fragment>
@@ -69,20 +63,14 @@ class Nasa extends React.Component {
           <Header />
           <Navigation />
           <section>
-            <div className='nasa-image'>
-              <img src={image} alt='nasa of the day' />
-              <LoaderSpinner />
-            </div>
-            <div className='nasa-info'>
-              <h1>{imageInfo.title}</h1>
-              <p>{imageInfo.explanation}</p>
-            </div>
+            <NasaImageDaily imageDaily={imageDaily} imageInfo={imageInfo}/>
           </section>
         </div>
         <div className='content asteroids'>
           <section className='asteroid-belt'>
             <h1>Daily Asteroids are Go!</h1>
             <p>Each day NASA publishes a list of asteroids based on when they are at their closest point to Earth.</p>
+            <p>Click on an asteroid's name to go to the awesome NASA information page for that asteroid.</p>
             <p className='red'>Those in red are considered potentially hazardous to Earth.</p>
           </section>
           <section className='asteroid-sizes'>
