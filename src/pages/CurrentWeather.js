@@ -21,20 +21,32 @@ class CurrentWeather extends React.Component {
   }
 
   getWeather() {
-    fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&q=Gateshead,uk&appid=b8b85e414d6d20c6db5e6b69eb3858c9")
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        temp: data.main.temp,
-        windSpeed: data.wind.speed,
-        windDirection: data.wind.deg,
-        pressure: data.main.pressure,
-        humidity: data.main.humidity,
-        location: data.name,
-        overall: data.weather['0'].main,
-        description: data.weather['0'].description
-      });
-    })
+    let lat;
+    let lon;
+
+    navigator.geolocation.getCurrentPosition(position => {
+      lat = position.coords.latitude;
+      lon = position.coords.longitude;
+      console.log(lat);
+      console.log(lon);
+      const api = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=b8b85e414d6d20c6db5e6b69eb3858c9`;
+
+      fetch(api)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        this.setState({
+          temp: data.main.temp,
+          windSpeed: data.wind.speed,
+          windDirection: data.wind.deg,
+          pressure: data.main.pressure,
+          humidity: data.main.humidity,
+          location: data.name,
+          overall: data.weather['0'].main,
+          description: data.weather['0'].description
+        });
+      })
+    });
   }
 
   componentDidMount() {
@@ -50,6 +62,7 @@ class CurrentWeather extends React.Component {
     const location = this.state.location;
     const overall = this.state.overall;
     const description = this.state.description;
+    console.log(this.state);
 
     const temp = Math.round(temperature);
     let tempColour = 'temp';
