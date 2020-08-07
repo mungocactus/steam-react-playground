@@ -1,29 +1,34 @@
 import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
+import WeatherDaily from '../components/WeatherDaily';
 
 class WeatherForecast extends React.Component {
   constructor() {
     super();
 
+    this.state = {
+      weather: {}
+    }
+
     this.get5DayWeather = this.get5DayWeather.bind(this);
   }
 
-  showWeather(location, forecast) {
-    console.log(location.name);
-    const currentWeather = forecast[0].weather[0];
-    console.log(currentWeather.description);
-    console.log(forecast[0].main.temp);
-
-    forecast.forEach(day => {
-      let date = new Date(day.dt * 1000);
-      let days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
-      let dayName = days[date.getDay()];
-      // console.log(date);
-      console.log(dayName);
-      console.log(day);
-    })
-  }
+  // showWeather(location, forecast) {
+  //   console.log(location.name);
+  //   const currentWeather = forecast[0].weather[0];
+  //   console.log(currentWeather.description);
+  //   console.log(forecast[0].main.temp);
+  //
+  //   forecast.forEach(day => {
+  //     let date = new Date(day.dt * 1000);
+  //     let days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+  //     let dayName = days[date.getDay()];
+  //     // console.log(date);
+  //     console.log(dayName);
+  //     console.log(day);
+  //   })
+  // }
 
   get5DayWeather() {
     let lat;
@@ -39,7 +44,10 @@ class WeatherForecast extends React.Component {
       fetch(api)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        console.log(data.daily);
+        this.setState({
+          weather: data.daily
+        })
       })
     });
   }
@@ -49,10 +57,23 @@ class WeatherForecast extends React.Component {
   }
 
   render() {
+    console.log(this.state);
+    const {weather} = this.state;
+    console.log(weather);
+
     return (
       <div className='content'>
         <Header />
         <Navigation />
+        <ul className='weather-forecast'>
+          {Object.keys(weather).map(key =>
+            <WeatherDaily
+              key={key}
+              index={key}
+              weatherDaily={weather[key]}
+            />
+          )}
+        </ul>
       </div>
     )
   }

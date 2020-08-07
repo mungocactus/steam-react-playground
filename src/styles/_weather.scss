@@ -48,6 +48,7 @@
 
     p {
       font-family: 'Playfair Display', serif;
+      -webkit-font-smoothing: antialiased;
       font-size: 16px;
     }
   }
@@ -106,4 +107,108 @@
   margin: 0 auto;
   padding: 10px;
   width: 70px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: flex-start;
+  width: 1000px;
+  overflow: scroll;
+  padding-bottom: 50px;
+}
+
+.weather-daily {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-family: 'Oswald', sans-serif;
+  margin: 150px 100px 0 0;
+
+  .weather-background {
+    background-image: url('../assets/weather/few-clouds.jpg');
+    background-size: cover;
+    // background-color: $grey;
+    position: relative;
+    height: 231px;
+    width: 170px;
+
+    p {
+      color: $white;
+      position: absolute;
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+
+    .day {
+      left: 7px;
+      top: 0;
+    }
+
+    .max {
+      font-size: 32px;
+      font-weight: 900;
+      left: 100px;
+      top: -3px;
+    }
+
+    .max-temp {
+      font-size: 73px;
+      font-weight: 900;
+      letter-spacing: -4px;
+      left: 100px;
+      top: 25px;
+    }
+
+    .min {
+      left: 100px;
+      top: 111px;
+    }
+
+    .min-temp {
+      left: 100px;
+      top: 141px;
+    }
+  }
+
+  .main-description {
+    color: $grey-dark;
+    font-size: 30px;
+    margin: 12px 0 6px;
+  }
+
+  .description {
+    font-family: 'Playfair Display', serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 21px;
+    margin-bottom: 5px;
+  }
+
+  .wind-details {
+    align-items: center;
+    color: $grey-mid;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    width: 160px;
+
+    .circle {
+      background-color: $grey;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+
+      p {
+        color: $white;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .sun-details {
+    color: $grey-mid;
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+  }
 }
