@@ -109,6 +109,18 @@
   width: 70px;
 }
 
+.weather-weekly-forecast {
+  margin-top: 90px;
+
+  h1 {
+    color: $black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 33px;
+  }
+}
+
 .weather-forecast {
   display: flex;
   justify-content: flex-start;
@@ -123,12 +135,10 @@
   flex-direction: column;
   list-style: none;
   font-family: 'Oswald', sans-serif;
-  margin: 150px 100px 0 0;
+  margin: 25px 100px 0 0;
 
   .weather-background {
-    background-image: url('../assets/weather/few-clouds.jpg');
     background-size: cover;
-    // background-color: $grey;
     position: relative;
     height: 231px;
     width: 170px;
@@ -148,7 +158,7 @@
     .max {
       font-size: 32px;
       font-weight: 900;
-      left: 100px;
+      left: 95px;
       top: -3px;
     }
 
@@ -156,17 +166,17 @@
       font-size: 73px;
       font-weight: 900;
       letter-spacing: -4px;
-      left: 100px;
+      left: 95px;
       top: 25px;
     }
 
     .min {
-      left: 100px;
+      left: 95px;
       top: 111px;
     }
 
     .min-temp {
-      left: 100px;
+      left: 95px;
       top: 141px;
     }
   }

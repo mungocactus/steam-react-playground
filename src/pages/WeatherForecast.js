@@ -14,22 +14,6 @@ class WeatherForecast extends React.Component {
     this.get5DayWeather = this.get5DayWeather.bind(this);
   }
 
-  // showWeather(location, forecast) {
-  //   console.log(location.name);
-  //   const currentWeather = forecast[0].weather[0];
-  //   console.log(currentWeather.description);
-  //   console.log(forecast[0].main.temp);
-  //
-  //   forecast.forEach(day => {
-  //     let date = new Date(day.dt * 1000);
-  //     let days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
-  //     let dayName = days[date.getDay()];
-  //     // console.log(date);
-  //     console.log(dayName);
-  //     console.log(day);
-  //   })
-  // }
-
   get5DayWeather() {
     let lat;
     let lon;
@@ -65,15 +49,18 @@ class WeatherForecast extends React.Component {
       <div className='content'>
         <Header />
         <Navigation />
-        <ul className='weather-forecast'>
-          {Object.keys(weather).map(key =>
-            <WeatherDaily
-              key={key}
-              index={key}
-              weatherDaily={weather[key]}
-            />
-          )}
-        </ul>
+        <div className='weather-weekly-forecast'>
+          <h1>Weather Forecast</h1>
+          <ul className='weather-forecast'>
+            {Object.keys(weather).map(key =>
+              <WeatherDaily
+                key={key}
+                index={key}
+                weatherDaily={weather[key]}
+              />
+            )}
+          </ul>
+        </div>
       </div>
     )
   }
