@@ -45,6 +45,9 @@ class Nasa extends React.Component {
     fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date&api_key=bdwaDHFx7h0ReuIY1kiocxb3dZ9Cig3xMKe240Y7")
     .then(response => response.json())
     .then(data => {
+      console.log(data);
+      console.log(data.near_earth_objects);
+      console.log(data.near_earth_objects[todaysDate]);
       this.setState({
         asteroids: data.near_earth_objects[todaysDate]
       });
@@ -53,6 +56,7 @@ class Nasa extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     const imageInfo = this.state.imageInfo;
     const imageDaily = this.state.imageDaily;
     const {asteroids} = this.state;

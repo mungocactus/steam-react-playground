@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 
-class CurrentWeather extends React.Component {
+class WeatherCurrent extends React.Component {
   constructor() {
     super();
 
@@ -121,4 +121,4 @@ class CurrentWeather extends React.Component {
   }
 }
 
-export default CurrentWeather
+export default WeatherCurrent
