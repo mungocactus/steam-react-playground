@@ -122,11 +122,25 @@
 }
 
 .weather-forecast {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  width: 1000px;
   overflow: scroll;
   padding-bottom: 50px;
+
+  @media (min-width: 901px) {
+    flex-direction: row;
+    width: 715px;
+  }
+
+  @media (min-width: 1201px) {
+    width: 985px;
+  }
+
+  @media (min-width: 1501px) {
+    width: 1260px;
+  }
 }
 
 .weather-daily {
@@ -135,7 +149,11 @@
   flex-direction: column;
   list-style: none;
   font-family: 'Oswald', sans-serif;
-  margin: 25px 100px 0 0;
+  margin: 25px 0 50px;
+
+  @media (min-width: 901px) {
+    margin: 25px 100px 0 0;
+  }
 
   .weather-background {
     background-size: cover;
