@@ -67,7 +67,7 @@
     }
   }
 
-  p {
+  .title {
     color: $white;
     font-size: 10px;
     letter-spacing: 3px;
@@ -79,23 +79,101 @@
     }
   }
 
+  .date {
+    margin: auto;
+    text-align: center;
+  }
+
+  .date-line {
+    display: flex;
+    flex-direction: column;
+
+    p:first-child {
+      font-size: 20px;
+    }
+  }
+
   .clock {
     color: $white;
     font-size: 16px;
     font-style: italic;
     font-weight: 100;
     letter-spacing: 10px;
-    margin: auto;
+    padding-top: 20px;
     position: relative;
   }
 }
 
 .surf {
   background-color: #FFCD05;
+  height: 1400px;
+
+  img {
+    max-width: 600px;
+  }
+}
+
+.surf-title {
+  border: 1px solid $black;
+  font-family: 'Patua One', cursive;
+  margin: 0 0 50px 200px;
+  position: relative;
+  width: 600px;
+  height: 600px;
+
+  h1 {
+    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+}
+
+.history {
+  position: absolute;
+  top: 200px;
+  left: 84px;
+}
+
+.of {
+  position: absolute;
+  top: 228px;
+  left: 433px;
+}
+
+.surfing {
+  position: absolute;
+  top: 306px;
+  left: 120px;
+}
+
+.in {
+  position: absolute;
+  top: 441px;
+  left: 69px;
+}
+
+.sydney {
+  position: absolute;
+  top: 413px;
+  left: 140px;
 }
 
 .surf-image {
   background: url('/homepage/surfing.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.ratrods {
+  color: #fff;
+  background-color: #2B2A29;
+  height: 1900px;
+}
+
+.ratrod-image {
+  background: url('/homepage/rat-rod.jpg') no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
