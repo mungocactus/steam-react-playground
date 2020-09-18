@@ -15,6 +15,7 @@ class HomePage extends React.Component {
     console.log(vH);
 
     window.addEventListener('scroll', () => {
+      // fix sections
       const surfImage = document.querySelector('.js-surf-image');
       let surfImageTop = vH + 1400;
 
@@ -34,6 +35,28 @@ class HomePage extends React.Component {
       } else if (window.scrollY < ratrodImageTop) {
         ratrodImage.style.backgroundAttachment = 'fixed';
       }
+
+      // move tracks image
+      const tracksImage = document.querySelector('.tracks');
+      let tracksImageStart = Math.floor(vH / 9);
+
+      let tracksTopProperty = getComputedStyle(tracksImage);
+      const tracksTopNumber = tracksTopProperty.top;
+      let tracksTop = parseInt(tracksTopNumber.replace('px', ''));
+
+      console.log(tracksTop);
+
+      console.log(tracksImageStart, 'start');
+
+      if (window.scrollY > tracksImageStart) {
+        if (tracksTop >= 0) {
+          tracksImage.style.display = 'block';
+          tracksImage.style.top = 0;
+        } else if (tracksTop < 0) {
+          tracksImage.style.display = 'block';
+          tracksImage.style.top = -1900 + (window.scrollY * 1.8) + 'px';
+        }
+      }
     })
   }
 
@@ -51,18 +74,23 @@ class HomePage extends React.Component {
           <Clock />
         </section>
         <section className='surf'>
-          <div className='surf-title'>
-            <h1 className='history'>History</h1>
-            <h2 className='of'>of</h2>
-            <h1 className='surfing'>Surfing</h1>
-            <h2 className='in'>in</h2>
-            <h1 className='sydney'>Sydney</h1>
+          <div className='section-top'>
+            <div className='surf-title'>
+              <h2 className='the'>the</h2>
+              <h1 className='history'>History</h1>
+              <h2 className='of'>of</h2>
+              <h1 className='surfing'>Surfing</h1>
+              <h2 className='in'>in</h2>
+              <h1 className='sydney'>Sydney</h1>
+            </div>
+            <div className='tracks-parent'>
+              <img className='tracks' src='/homepage/tracks.jpg' />
+            </div>
           </div>
-          <div>
-            <img src='/homepage/tracks.jpg' />
+          <div className='section-bottom'>
+            <p>Lorem ipsum dolor is renowned as one of the world's premier surfing destinations.</p>
+            <p>Australian surfboard-makers have driven innovation in surfboard design and production since the mid-1960s.</p>
           </div>
-          <p>Lorem ipsum dolor is renowned as one of the world's premier surfing destinations.</p>
-          <p>Australian surfboard-makers have driven innovation in surfboard design and production since the mid-1960s.</p>
         </section>
         <section className='surf-image js-surf-image'>
         </section>

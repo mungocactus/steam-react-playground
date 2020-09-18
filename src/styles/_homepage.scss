@@ -106,20 +106,48 @@
 
 .surf {
   background-color: #FFCD05;
-  height: 1400px;
+  height: 2000px;
+
+  @media (min-width: 1201px) {
+    height: 1400px
+  }
 
   img {
     max-width: 600px;
+  }
+
+  .section-top {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    // justify-content: center;
+
+    @media (min-width: 1201px) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }
 
 .surf-title {
   border: 1px solid $black;
   font-family: 'Patua One', cursive;
-  margin: 0 0 50px 200px;
-  position: relative;
+  margin: 100px 0 0 0;
   width: 600px;
-  height: 600px;
+  height: 450px;
+  position: relative;
+
+  @media (min-width: 1201px) {
+    margin: 375px 0 0 25px;
+    width: 550px;
+    height: 413px;
+  }
+
+  @media (min-width: 1501px) {
+    margin: 375px 0 0 50px;
+    width: 600px;
+    height: 450px;
+  }
 
   h1 {
     font-size: 100px;
@@ -128,6 +156,12 @@
   h2 {
     font-size: 50px;
   }
+}
+
+.the {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .history {
@@ -158,6 +192,32 @@
   position: absolute;
   top: 413px;
   left: 140px;
+}
+
+.tracks-parent {
+  border: 1px solid $black;
+  position: relative;
+  margin: 375px 0 0 0;
+  width: 600px;
+  height: 450px;
+
+  @media (min-width: 1201px) {
+    margin: 375px 0 0 25px;
+    width: 550px;
+    height: 413px;
+  }
+
+  @media (min-width: 1501px) {
+    margin: 375px 0 0 50px;
+    width: 600px;
+    height: 450px;
+  }
+}
+
+.tracks {
+  // display: none;
+  position: absolute;
+  top: -1821px;
 }
 
 .surf-image {
