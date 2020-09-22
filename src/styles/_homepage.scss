@@ -116,7 +116,12 @@
     max-width: 600px;
   }
 
-  .section-top {
+  p {
+    padding-bottom: 15px;
+  }
+
+  .section-top,
+  .section-bottom {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -130,7 +135,7 @@
 }
 
 .surf-title {
-  border: 1px solid $black;
+  // border: 1px solid $black;
   font-family: 'Patua One', cursive;
   margin: 100px 0 0 0;
   width: 600px;
@@ -138,13 +143,13 @@
   position: relative;
 
   @media (min-width: 1201px) {
-    margin: 375px 0 0 25px;
+    margin: 375px 13px 0 0;
     width: 550px;
     height: 413px;
   }
 
   @media (min-width: 1501px) {
-    margin: 375px 0 0 50px;
+    margin: 375px 25px 0 0;
     width: 600px;
     height: 450px;
   }
@@ -156,59 +161,81 @@
   h2 {
     font-size: 50px;
   }
+
+  .typo-rule {
+    background-color: $black;
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    top: 371px;
+  }
 }
 
-.the {
+.the-a {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -30px;
+  left: 5px;
 }
 
 .history {
   position: absolute;
-  top: 200px;
-  left: 84px;
+  top: 37px;
+  left: 0;
 }
 
 .of {
   position: absolute;
-  top: 228px;
-  left: 433px;
+  top: 62px;
+  left: 357px;
 }
 
 .surfing {
   position: absolute;
-  top: 306px;
-  left: 120px;
+  top: 137px;
+  left: 0;
 }
 
 .in {
   position: absolute;
-  top: 441px;
-  left: 69px;
+  top: 157px;
+  left: 368px;
 }
 
 .sydney {
   position: absolute;
-  top: 413px;
-  left: 140px;
+  top: 237px;
+  left: 0;
 }
 
 .tracks-parent {
-  border: 1px solid $black;
+  p {
+    margin: 15px 0 0 0;
+
+    // @media (min-width: 1201px) {
+    //   margin: 15px 0 0 13px;
+    // }
+    //
+    // @media (min-width: 1501px) {
+    //   margin: 15px 0 0 25px;
+    // }
+  }
+}
+
+.tracks-cover {
+  // border: 1px solid $black;
   position: relative;
   margin: 375px 0 0 0;
   width: 600px;
   height: 450px;
 
   @media (min-width: 1201px) {
-    margin: 375px 0 0 25px;
+    // margin: 375px 0 0 25px;
     width: 550px;
     height: 413px;
   }
 
   @media (min-width: 1501px) {
-    margin: 375px 0 0 50px;
+    // margin: 375px 0 0 50px;
     width: 600px;
     height: 450px;
   }
@@ -224,6 +251,23 @@
   background: url('/homepage/surfing.jpg') no-repeat center center;
   background-size: cover;
   height: 100vh;
+}
+
+.surf-info {
+  margin-top: 100px;
+  width: 600px;
+
+  @media (min-width: 1201px) {
+    width: 1105px;
+  }
+
+  @media (min-width: 1501px) {
+    width: 1220px;
+  }
+}
+
+.surf-column {
+  width: 550px;
 }
 
 .ratrods {
