@@ -76,20 +76,32 @@ class HomePage extends React.Component {
         <section className='surf'>
           <div className='section-top'>
             <div className='surf-title'>
-              <h2 className='the'>the</h2>
+              <h2 className='the-a'>a</h2>
               <h1 className='history'>History</h1>
               <h2 className='of'>of</h2>
               <h1 className='surfing'>Surfing</h1>
               <h2 className='in'>in</h2>
               <h1 className='sydney'>Sydney</h1>
+              <div className='typo-rule'></div>
             </div>
             <div className='tracks-parent'>
-              <img className='tracks' src='/homepage/tracks.jpg' />
+              <div className='tracks-cover'>
+                <img className='tracks' src='/homepage/tracks.jpg' />
+              </div>
+              <p><span className='bold'>TRACKS</span> magazine, the Surfers Bible. Founded in Sydney in 1970</p>
             </div>
           </div>
           <div className='section-bottom'>
-            <p>Lorem ipsum dolor is renowned as one of the world's premier surfing destinations.</p>
-            <p>Australian surfboard-makers have driven innovation in surfboard design and production since the mid-1960s.</p>
+            <div className='surf-info'>
+              <div className='surf-column'>
+                <p>Surfing was brought to Australia in 1915 by Hawaiian Duke Kahanamoku. He demonstrated this ancient Hawaiian board riding technique at Freshwater Beach in Sydney. Kahanamoku's board is now on display in the northeast end of the Freshwater Surf Lifesaving Club.</p>
+                <p>In 1956, a team of lifeguards from the US introduced Malibu boards to Australia.</p>
+                <p>In the 1960s, Australian surfboard designer Bob McTavish invented the V-bottom surfboard, which is considered instrumental to the development of shortboard surfing.</p>
+              </div>
+              <div className='surf-column'>
+                <p>Australia is a leading country in surfing and surf board design. Shaping is an important part of the innovation and progression of surfing. Australian shapers include Darren Handley who is shaper to world champions Mick Fanning and Stephanie Gilmore. Mark Richards (four times World Champion) is an Australian surfing and surfboard shaping legend who shaped his own boards during his time on the world tour.</p>
+              </div>
+            </div>
           </div>
         </section>
         <section className='surf-image js-surf-image'>
