@@ -110,7 +110,7 @@ class HomePage extends React.Component {
           <div className='section-top'>
             <div class='homepage-section-title'>
               <h1>Rat Rods</h1>
-              <h2>The modern definition of a rat rod is a custom car with a deliberately worn-down, unfinished appearance, typically lacking paint, showing rust.</h2>
+              <h2>The modern definition of a rat rod is a custom car with a deliberately worn-down, unfinished appearance, typically lacking paint, showing rust</h2>
             </div>
             <div class='homepage-section-img'>
               <img src='homepage/rat-rod-bw.jpg' alt='ratrod'/>
@@ -119,14 +119,9 @@ class HomePage extends React.Component {
           <div className='section-bottom'>
             <div className='surf-info'>
               <div class='surf-column'>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
+                <p>The origin of the term "rat rod" is the subject of dispute, but was definitely coined by one specific person in the Shifters So. Cal. car club. In the early 1990s, Anthony Casteneda thought of the word when they were interviewed in a Rod & Custom magazine article. Anthony stated that to him and his car club, their traditional hot rods were lacking certain elements like paint and/or upholstery, and were similar to rat bikes of their time period, thus the name Rat Rods.</p>
+                <p>The origin of the movement itself is a little easier to pin down. In 1987, after many decades of building hot rods and customs, Jim "Jake" Jacobs gathered spare parts from his amassed personal stash and put together a '28 Ford Phaeton in 28 days. It sported no fenders, wide-white bias-ply tires, a rusty Model A body on '32 Ford frame rails, a chopped windshield and a shortened deuce grille shell with a small-block Chevy 350 and a '39 Ford 3-speed. Jake drove it to Pleasanton, CA and entered the Goodguys' annual West Coast Nationals with no bodywork, paint or interior (other than what was needed to be functional and legal). He parked in full view of many high-end, top-dollar customs and proceeded to pull out a bucket of paint and some brushes. Many spectators stopped to watch, and a few even joined Jake as he painted the car.</p>
+                <p>The typical rat rod is a late-1920s through to late-1950s coupe or roadster, but sometimes a truck or sedan. Many early (pre-World War II) vehicles were not built with fenders, hoods, running boards, and bumpers. The bodies are frequently channeled over the frame and sectioned, or the roofs are chopped, for a lower profile. Later-era post-war vehicles were rarely constructed without fenders and were often customized in the fashion of kustoms, leadsleds, and lowriders; Maltese crosses, skulls, and other accessories were often added. The owner of the vehicle was typically responsible for most, or all, of the work present in the vehicle.</p>
               </div>
             </div>
           </div>
@@ -139,7 +134,7 @@ class HomePage extends React.Component {
             <h1>Ancient</h1>
             <h1>Yew</h1>
             <h1>Trees</h1>
-            <h2>Trees</h2>
+            <h2>With lifespans of up to 3,000 years, the oldest living tree in the UK is easily a yew</h2>
           </div>
           <div class='homepage-section-img'>
             <img src='homepage/churchyard.jpg' alt='churchyard'/>
@@ -148,14 +143,11 @@ class HomePage extends React.Component {
         <div className='section-bottom'>
           <div className='surf-info'>
             <div class='column'>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
+              <p>Yews have witnessed some monumental moments in our history. A yew was said to have sheltered Robert the Bruce, it was under a yew that the Magna Carta was sealed and the same yew was also believed to be a meeting place for Henry VIII and Anne Boleyn.</p>
+              <p>Britain is home to far more ancient yews than any other country in Europe. The Ancient Yew Group has identified 978 ancient or veteran yews, more than 500 years old in England and 407 in Wales.</p>
+              <p>Many are found in churchyards, where their sacred status has protected them well for centuries. Many old yews were planted by Norman church-builders; others by Celtic Christians; and some predate Christianity, showing how the new religion supplanted older sacred sites.</p>
+              <p>The yew has a remarkable trait that even today is quite astonishing. A hollow yew is able to regenerate itself by producing new roots from its centre. These roots grow down into the ground to feed and strengthen the ageing tree, stabilising it and prolonging its survival, enabling the tree to continue life long after many other trees would have perished. With this exceptional quality, it is understandable that the yew was revered as a symbol of long life, rebirth and regeneration – and a fitting subject on which to focus in January, when our thoughts turn to new beginnings.</p>
+              <p>The yew was a sacred tree, and sites with ancient yews became places of Druidic or Celtic worship. Druids, the priests of the Celtic tribes, believed wands of yew would banish evil spirits. When the pagan population was converted to Christianity from Roman times onward, the same sites continued to be considered sacred places. The Anglo-Saxons built churches near the old yews; later, the old churches were built over with new.</p>
             </div>
           </div>
         </div>
