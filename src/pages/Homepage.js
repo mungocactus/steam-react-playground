@@ -4,14 +4,6 @@ import Navigation from '../components/Navigation'
 import Clock from '../components/Clock';
 
 class HomePage extends React.Component {
-  constructor() {
-    super();
-  }
-
-  // componentDidMount() {
-  //   this.parallax();
-  // }
-
   render() {
     return (
       <div className='homepage'>
