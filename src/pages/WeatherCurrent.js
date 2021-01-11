@@ -7,7 +7,7 @@ class WeatherCurrent extends React.Component {
     super();
 
     this.state = {
-      temp: '18',
+      temp: '0',
       windSpeed: '30',
       windDirection: '180',
       pressure: '1011',

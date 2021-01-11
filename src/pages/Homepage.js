@@ -6,11 +6,13 @@ import Clock from '../components/Clock';
 class HomePage extends React.Component {
   render() {
     return (
-      <div className='homepage-content'>
-        <Header />
-        <Navigation />
-        <p>A little PROJECT by PAUL HESS</p>
-        <Clock />
+      <div className='homepage'>
+        <section className='homepage-content'>
+          <Header />
+          <Navigation />
+          <p className='title'>A little PROJECT by PAUL HESS</p>
+          <Clock />
+        </section>
       </div>
     )
   }
