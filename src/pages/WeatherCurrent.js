@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
+import LoaderSpinner from '../components/LoaderSpinner';
 
 class WeatherCurrent extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      temp: '0',
+      temp: '3',
       windSpeed: '30',
       windDirection: '180',
       pressure: '1011',
@@ -17,7 +18,12 @@ class WeatherCurrent extends React.Component {
       description: 'bloody awful'
     };
 
+    this.hideSpinner = this.hideSpinner.bind(this);
     this.getWeather = this.getWeather.bind(this);
+  }
+
+  hideSpinner() {
+    document.querySelector('.loader-container').classList.add('hide');
   }
 
   getWeather() {
@@ -45,6 +51,13 @@ class WeatherCurrent extends React.Component {
           overall: data.weather['0'].main,
           description: data.weather['0'].description
         });
+      })
+      .then(() => {
+          this.hideSpinner();
+        }
+      )
+      .catch(error => {
+        console.log('oops no weather today');
       })
     });
   }
@@ -86,14 +99,17 @@ class WeatherCurrent extends React.Component {
         <div className='weather-today'>
           <div className='weather'>
             <h1>Weather Today</h1>
-            <p className='location'>{location}</p>
-            <div className='temp-container'>
-              <p>Current temperature</p>
-              <h1 className={tempColour}>{temp}</h1>
-            </div>
-            <div className='overall'>
-              <h2>{overall}</h2>
-              <p>{description}</p>
+            <div className='weather-basic'>
+              <p className='location'>{location}</p>
+              <div className='temp-container'>
+                <p>Current temperature</p>
+                <h1 className={tempColour}>{temp}</h1>
+              </div>
+              <div className='overall'>
+                <h2>{overall}</h2>
+                <p>{description}</p>
+              </div>
+              <LoaderSpinner />
             </div>
           </div>
           <div className='weather'>
