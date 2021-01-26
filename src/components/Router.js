@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
-import RandomUser from '../pages/RandomUser';
 import Nasa from '../pages/Nasa';
 import WeatherCurrent from '../pages/WeatherCurrent';
+import MusicProfiles from '../pages/MusicProfiles';
+import RandomUser from '../pages/RandomUser';
 
 class Router extends React.Component {
   render() {
@@ -12,9 +13,10 @@ class Router extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={App} />
-            <Route path='/randomuser' component={RandomUser} />
             <Route path='/nasa' component={Nasa} />
             <Route path='/weather-current' component={WeatherCurrent} />
+            <Route path='/music-profiles' component={MusicProfiles} />
+            <Route path='/randomuser' component={RandomUser} />
           </Switch>
         </BrowserRouter>
       </div>
