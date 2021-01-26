@@ -29,9 +29,6 @@ class MusicProfiles extends React.Component {
     .then(data => {
       console.log(data.data);
       let bobbies = data.data;
-      console.log(searchValue);
-      console.log(this.searchValue);
-      console.log('${searchValue}');
       console.log(`${searchValue}`);
 
       let bobbyArtist = bobbies.filter(bobby => bobby.artist.name === `${searchValue}`);
