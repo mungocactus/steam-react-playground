@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Search from '../assets/icons/search.svg';
 
 const SearchBox = (props) => {
   const [searchValue, setSearchValue] = useState('');
@@ -17,15 +18,19 @@ const SearchBox = (props) => {
   console.log('in here');
 
   return (
-    <form>
-      <p>Search</p>
-      <input
-      type="text"
-      id="search"
-      value={searchValue}
-      onChange={getSearchValue}
-      />
-      <button onClick={submitSearchValue} type='submit' value='SEARCH'>Search</button>
+    <form className='search'>
+      <div className='input-container'>
+        <input
+        type="text"
+        id="search"
+        placeholder={props.placeholderText}
+        value={searchValue}
+        onChange={getSearchValue}
+        />
+        <button className='search-button' onClick={submitSearchValue} type='submit' value='search'>
+          <img src={Search} className='search-icon' alt=''/>
+        </button>
+      </div>
     </form>
   )
 }

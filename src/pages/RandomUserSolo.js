@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import images from '../components/Images'
 
-class RandomUser extends React.Component {
+class RandomUserSolo extends React.Component {
   constructor() {
     super();
 
@@ -94,4 +94,4 @@ class RandomUser extends React.Component {
   }
 }
 
-export default RandomUser
+export default RandomUserSolo
