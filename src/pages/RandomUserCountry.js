@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import SearchBox from '../components/SearchBox';
 import RandomUser from '../components/RandomUser';
+import flags from '../components/Flags';
 
 class RandomUserCountry extends React.Component {
   constructor(props) {
@@ -10,30 +11,50 @@ class RandomUserCountry extends React.Component {
 
     this.state = {
       country: {},
-      placeholder: 'Country'
+      placeholder: 'Country',
+      flag: ''
     }
 
     this.searchAPI = this.searchAPI.bind(this);
+    this.getFlag = this.getFlag.bind(this);
+  }
+
+  componentDidMount() {
+    this.getFlag();
+  }
+
+  getFlag(searchValue) {
+    const flagShape = searchValue ? searchValue.toLowerCase() : 'white';
+    this.setState({
+      flag: `/flags/${flagShape}.svg`
+    })
+    console.log(this.state.flag);
   }
 
   searchAPI(searchValue) {
+    this.getFlag(searchValue);
     console.log('searching ...');
-    console.log(searchValue);
+    console.log(searchValue.charAt(0).toUpperCase() + searchValue.slice(1));
+    const searchCountry = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
     fetch('https://randomuser.me/api/?results=250')
     .then(response => response.json())
     .then(result => {
       console.log(searchValue);
       console.log(`${searchValue}`);
       let persons = result.results;
-      let country = persons.filter(person => person.location.country === searchValue);
+      let country = persons.filter(person => person.location.country === searchCountry);
       console.log(country);
       this.setState({
         country: country
       })
     })
+    .catch(error => {
+      console.log('shit');
+    })
   }
 
   render() {
+    const flag = this.state.flag;
     const {country} = this.state;
     console.log(this.state);
     return(
@@ -66,7 +87,7 @@ class RandomUserCountry extends React.Component {
             <SearchBox dinosaurs={this.searchAPI} placeholderText={this.state.placeholder} />
           </div>
           <div className='flag-container'>
-            <div className='flag'></div>
+            <img className='flag' src={flag} alt='' />
           </div>
           <ul>
             {Object.keys(country).map(key =>

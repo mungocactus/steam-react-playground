@@ -43,9 +43,10 @@ class RandomUserSolo extends React.Component {
   getRandomImage() {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
     this.randomImage = `/random-users/random-user-${randomNumber}.jpg`;
+    console.log(this.randomImage);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.randomUser();
     this.getRandomImage();
   }
