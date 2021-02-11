@@ -9,7 +9,8 @@ class Navigation extends React.Component {
           <li><a href='/nasa'>NASA</a></li>
           <li><a href='/weather-current'>Current Weather</a></li>
           <li><a href='/music-profiles'>Music Profiles</a></li>
-          <li><a href='/randomuser'>Random User</a></li>
+          <li><a href='/randomuser-solo'>Random User</a></li>
+          <li><a href='/randomusers-country'>Random Users by Country</a></li>
           <li><a href='/'>Home</a></li>
         </ul>
       </div>

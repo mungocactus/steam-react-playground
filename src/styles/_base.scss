@@ -44,7 +44,7 @@ header {
     margin-bottom: 23px;
     padding-bottom: 3px;
     position: relative;
-    width: 150px;
+    width: 225px;
 
     &:before {
       content: "";
@@ -185,4 +185,19 @@ input {
 
 .hide {
   display: none;
+}
+
+.search {
+  input {
+    padding: 0 0 2px 15px;
+  }
+}
+
+.search-button {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
 }

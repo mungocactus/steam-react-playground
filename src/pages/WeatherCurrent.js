@@ -88,7 +88,7 @@ class WeatherCurrent extends React.Component {
     let windWarning = 'wind-direction';
     console.log(windSpeedKmph);
     console.log(rotate);
-    windSpeedKmph > 40 ? windWarning = 'wind-direction wind-warning' : windWarning = 'wind-direction';
+    windSpeedKmph > 25 ? windWarning = 'wind-direction wind-warning' : windWarning = 'wind-direction';
 
     console.log(windDirection);
 
