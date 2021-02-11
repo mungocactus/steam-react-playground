@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import SearchBox from '../components/SearchBox';
 import RandomUser from '../components/RandomUser';
-import flags from '../components/Flags';
 
 class RandomUserCountry extends React.Component {
   constructor(props) {
