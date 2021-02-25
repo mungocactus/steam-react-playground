@@ -23,18 +23,21 @@ class RandomUserCountry extends React.Component {
   }
 
   getFlag(searchValue) {
-    const flagShape = searchValue ? searchValue.toLowerCase() : 'white';
+    const flagName = searchValue ? searchValue.toLowerCase().split(' ').join('-') : 'white';
+
     this.setState({
-      flag: `/flags/${flagShape}.svg`
+      flag: `/flags/${flagName}.svg`
     })
-    console.log(this.state.flag);
   }
 
   searchAPI(searchValue) {
     this.getFlag(searchValue);
-    console.log('searching ...');
-    console.log(searchValue.charAt(0).toUpperCase() + searchValue.slice(1));
-    const searchCountry = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
+
+    const countryName = searchValue.split(' ').map(name => {
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    });
+    const searchCountry = countryName.join(' ');
+
     fetch('https://randomuser.me/api/?results=250')
     .then(response => response.json())
     .then(result => {
