@@ -80,7 +80,7 @@
 }
 
 .randomuser-country {
-  font-family: 'Garamond';
+  font-family: 'Cormorant Garamond', serif;
   position: relative;
   width: 100%;
 
@@ -114,7 +114,8 @@
     }
 
     input {
-      font-family: 'Garamond';
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
       font-size: 28px;
       letter-spacing: 1px;
       margin: 0;
@@ -151,7 +152,7 @@
     position: relative;
 
     .country-list {
-      font-family: 'Garamond';
+      font-family: 'Cormorant Garamond', serif;
       font-weight: 100;
       letter-spacing: .5px;
       margin-bottom: 15px;
